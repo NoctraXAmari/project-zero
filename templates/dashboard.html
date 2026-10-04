@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Project Zero</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e8e8f0;
+    min-height: 100vh;
+    padding: 24px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .user { display: flex; align-items: center; gap: 10px; }
+  .user img {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: #1f1f2e;
+  }
+  .logout {
+    color: #8a8a9a;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .card {
+    background: #13131a;
+    border: 1px solid #1f1f2e;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .card h2 { font-size: 16px; margin-bottom: 12px; }
+  .card p { color: #8a8a9a; font-size: 13px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="user">
+      <img src="https://cdn.discordapp.com/avatars/{{ user.id }}/{{ user.avatar }}.png" alt="">
+      <span>{{ user.username }}</span>
+    </div>
+    <a href="/logout" class="logout">Logout</a>
+  </div>
+
+  <div class="card">
+    <h2>Welcome, {{ user.username }}</h2>
+    <p>Dashboard setup in progress. Next steps: webhook config, target usernames, loadstring generator.</p>
+  </div>
+</body>
+</html>
