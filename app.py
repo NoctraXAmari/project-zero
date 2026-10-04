@@ -11,7 +11,7 @@ app.secret_key = os.environ.get("FLASK_SECRET", secrets.token_hex(32))
 
 CLIENT_ID = os.environ.get("CLIENT_ID")
 CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
-REDIRECT_URI = "https://project-zero-production-073d.up.railway.app/"
+REDIRECT_URI = "https://project-zero-production-073d.up.railway.app/callback"
 
 DISCORD_API = "https://discord.com/api"
 
